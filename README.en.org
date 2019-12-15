@@ -1,0 +1,21 @@
+#+TITLE: Twitter Bootstrap
+
+* What's this?
+
+In mikutter 4.0, Twitter plugin become eternal.
+
+The goal of this repository, regain Twitter functions to your mikutter as third-party plugin.
+
+* Process
+
+IT IS MIKUTTER POWER! Awesome mikutter power.
+
+#+BEGIN_SRC sh
+for i in {api_request_file_cache,direct_message,followingcontrol,home_timeline,list,list_for_profile,list_settings,mentions,message_detail_view,message_favorite,message_retweet,ratelimit,rest,saved_search,streaming,twitter,twitter_activity,twitter_datasource,twitter_settings,user_detail_view}; do git clone https://github.com/mikutter/$i.git ~/.mikutter/plugin/$i; done
+#+END_SRC
+
+* What happen?
+
+Mikutter plugin is simple, powerful and moeful.
+
+So, mikutter is power.
