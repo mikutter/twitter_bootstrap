@@ -1,0 +1,21 @@
+version: '2.1'
+
+executors:
+  shellcheck:
+    docker:
+      - image: koalaman/shellcheck-alpine:stable
+
+jobs:
+  build:
+    executor:
+      name: shellcheck
+    steps:
+    - checkout
+    - run:
+        name: test
+        command: shellcheck twitter-bootstrap.sh
+workflows:
+  build:
+    jobs:
+      - build:
+          name: 'shellcheck twitter-bootstrap.sh'
