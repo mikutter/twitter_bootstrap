@@ -10,10 +10,21 @@ mikutter 4.0ではTwitterプラグインが標準で非対応になりました�
 
 ** 自動でインストールできるプラグイン
 
-以下のコマンドを実行して、mikutterを起動してください。mikutter 4.0以降のための手順となるため、3.xで実行した場合どうなるか分かりません。
+*** mikutter 5.0 以降の場合
+
+以下のコマンドを実行して、mikutterを起動してください。
 
 #+BEGIN_SRC sh
-mkdir -p ~/.mikutter/plugin/ && for i in api_request_file_cache direct_message followingcontrol home_timeline list list_for_profile list_settings mentions message_detail_view message_favorite message_retweet ratelimit rest saved_search streaming twitter twitter_activity twitter_datasource twitter_settings user_detail_view; do git clone https://github.com/mikutter/$i.git ~/.mikutter/plugin/$i; done
+mkdir -p ~/.mikutter && git clone https://github.com/mikutter/twitter_bootstrap ~/.mikutter/twitter_bootstrap && (cd ~/.mikutter/twitter_bootstrap && sh twitter-bootstrap.sh)
+#+END_SRC
+
+*** mikutter 4.x の場合
+
+以下のコマンドを実行して、mikutterを起動してください。
+GTKに依存するプラグインについて gtk2 対応バージョンを取得します。
+
+#+BEGIN_SRC sh
+mkdir -p ~/.mikutter && git clone https://github.com/mikutter/twitter_bootstrap ~/.mikutter/twitter_bootstrap && (cd ~/.mikutter/twitter_bootstrap && sh twitter-bootstrap_mikutter4.sh)
 #+END_SRC
 
 ** twitter_api_keysのセットアップ
