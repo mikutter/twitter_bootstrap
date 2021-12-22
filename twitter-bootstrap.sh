@@ -10,7 +10,7 @@ fi
 plugindir=~/.mikutter/plugin
 mkdir -p $plugindir
 
-# GTK independent plugins
+# GTK and diva independent plugins
 for plugin in \
  api_request_file_cache \
  direct_message \
@@ -22,7 +22,6 @@ for plugin in \
  rest \
  saved_search \
  streaming \
- twitter \
  twitter_activity \
  twitter_datasource \
  twitter_settings \
@@ -30,7 +29,7 @@ for plugin in \
  git clone https://github.com/mikutter/$plugin.git $plugindir/$plugin
 done
 
-# GTK dependent plugins
+# GTK and diva dependent plugins
 for plugin_gtk in \
  followingcontrol \
  list_for_profile \
@@ -38,6 +37,7 @@ for plugin_gtk in \
  message_detail_view \
  message_retweet \
  user_detail_view \
+ twitter \
 ; do
  git clone https://github.com/mikutter/$plugin_gtk.git $opt $plugindir/$plugin_gtk
 done
