@@ -10,10 +10,20 @@ The goal of this repository, regain Twitter functions to your mikutter as third-
 
 ** Auto installation
 
+*** for mikutter 5.0 and later
+
 IT IS MIKUTTER POWER! Awesome mikutter power.
 
 #+BEGIN_SRC sh
-mkdir -p ~/.mikutter/plugin/ && for i in api_request_file_cache direct_message followingcontrol home_timeline list list_for_profile list_settings mentions message_detail_view message_favorite message_retweet ratelimit rest saved_search streaming twitter twitter_activity twitter_datasource twitter_settings user_detail_view; do git clone https://github.com/mikutter/$i.git ~/.mikutter/plugin/$i; done
+mkdir -p ~/.mikutter && git clone https://github.com/mikutter/twitter_bootstrap ~/.mikutter/twitter_bootstrap && (cd ~/.mikutter/twitter_bootstrap && sh twitter-bootstrap.sh)
+#+END_SRC
+
+*** for mikutter 4.x
+
+Needs to fetch gtk2 versions for GTK dependent plugins.
+
+#+BEGIN_SRC sh
+mkdir -p ~/.mikutter && git clone https://github.com/mikutter/twitter_bootstrap ~/.mikutter/twitter_bootstrap && (cd ~/.mikutter/twitter_bootstrap && sh twitter-bootstrap_mikutter4.sh)
 #+END_SRC
 
 ** twitter_api_keys
